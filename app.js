@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 
   // Get frequency data and visualise it
-  var freqData = new Uint8Array(50);
+  var freqData = new Uint8Array(100);
   var freqDataOne = new Uint8Array(1);
 
   var svgHeight = $(window).height();
@@ -48,10 +48,10 @@ $(document).ready(function() {
     svg.selectAll('rect')
       .data(freqData)
       .attr('y', function(d) {
-        return svgHeight-3*d;
+        return svgHeight-3.5*d;
       })
       .attr('height', function(d) {
-        return 3*d;
+        return 3.5*d;
       })
       .attr('fill', function(d) {
         return 'rgb(' + d + ', ' + 0 + ', ' + d + ')';
